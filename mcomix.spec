@@ -1,7 +1,7 @@
 Summary:	MComix is a fork of the Comix project	
 Name:		mcomix
 Version:	0.95
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Office
 URL:		http://mcomix.sourceforge.net/
