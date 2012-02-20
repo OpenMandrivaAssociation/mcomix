@@ -1,11 +1,11 @@
 Summary:	MComix is a fork of the Comix project	
 Name:		mcomix
-Version:	0.95
-Release:	2
+Version:	0.97.1
+Release:	1
 License:	GPLv2+
 Group:		Office
 URL:		http://mcomix.sourceforge.net/
-Source:		http://downloads.sourceforge.net/mcomix/%name-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/mcomix/%name-%{version}.tar.bz2
 
 Buildarch:	noarch
 BuildRequires:	python, python-imaging, jpeg-progs, pygtk2.0-devel
@@ -40,17 +40,17 @@ grep -rl comicthumb . | xargs sed -i -e 's|comicthumb|mcomicthumb|g'
 %install
 python setup.py \
 	install \
-	--root $RPM_BUILD_ROOT
+	--root %buildroot
 
-mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/gconf/schemas
+mkdir -p %buildroot%{_sysconfdir}/gconf/schemas
 install -cpm 644 ./mime/comicbook.schemas \
-	$RPM_BUILD_ROOT%{_sysconfdir}/gconf/schemas/%{name}.schemas
+	%buildroot%{_sysconfdir}/gconf/schemas/%{name}.schemas
 
 
 #localization
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/locale/
-mv $RPM_BUILD_ROOT%{python_sitelib}/%{name}/messages/*/ \
-	$RPM_BUILD_ROOT%{_datadir}/locale/
+mkdir -p %buildroot%{_datadir}/locale/
+mv %buildroot%{python_sitelib}/%{name}/messages/*/ \
+	%buildroot%{_datadir}/locale/
 
 
 %find_lang %{name}
@@ -80,6 +80,5 @@ desktop-file-install --vendor='' \
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/mime/packages/%{name}.xml
 %{_mandir}/man1/mcomix.1*
-%{_mandir}/man1/mcomicthumb.1*
 %{_datadir}/icons/hicolor/*/apps/%{name}*
 %{_datadir}/icons/hicolor/*/mimetypes/application-x-*.png
