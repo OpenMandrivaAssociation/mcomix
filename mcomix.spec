@@ -1,6 +1,6 @@
 Summary:	MComix is a fork of the Comix project	
 Name:		mcomix
-Version:	0.97.1
+Version:	0.98
 Release:	1
 License:	GPLv2+
 Group:		Office
@@ -70,7 +70,6 @@ desktop-file-install --vendor='' \
 %{clean_mime_database}
 
 %files -f %{name}.lang
-%defattr(-,root,root,-)
 %doc COPYING ChangeLog README
 
 %{_sysconfdir}/gconf/schemas/%{name}.schemas
