@@ -81,3 +81,23 @@ desktop-file-install --vendor='' \
 %{_mandir}/man1/mcomix.1*
 %{_datadir}/icons/hicolor/*/apps/%{name}*
 %{_datadir}/icons/hicolor/*/mimetypes/application-x-*.png
+
+
+%changelog
+* Thu Apr 26 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.98-1
++ Revision: 793565
+- version update 0.98
+
+* Mon Feb 20 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.97.1-1
++ Revision: 778132
+- version update 0.97.1
+
+* Mon Dec 26 2011 Denis Silakov <dsilakov@mandriva.org> 0.95-2
++ Revision: 745425
+- Bump release
+- Fix description
+
+* Tue Nov 15 2011 Alexander Khrukin <akhrukin@mandriva.org> 0.95-1
++ Revision: 730700
+- imported package mcomix
+
