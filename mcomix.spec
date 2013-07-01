@@ -1,4 +1,4 @@
-Summary:	MComix is a fork of the Comix project	
+Summary:	Fork of the Comix project	
 Name:		mcomix
 Version:	0.98
 Release:	1
