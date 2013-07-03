@@ -61,14 +61,6 @@ desktop-file-install --vendor='' \
 	--add-category='GNOME;GTK' \
 	%buildroot%_datadir/applications/*.desktop
 
-%post
-%{update_desktop_database}
-%{update_mime_database}
-
-%postun
-%{clean_desktop_database}
-%{clean_mime_database}
-
 %files -f %{name}.lang
 %doc COPYING ChangeLog README
 
