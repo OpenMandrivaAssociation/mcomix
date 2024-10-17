@@ -4,7 +4,7 @@ Version:	0.98
 Release:	3
 License:	GPLv2+
 Group:		Office
-URL:		http://mcomix.sourceforge.net/
+URL:		https://mcomix.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/mcomix/%name-%{version}.tar.bz2
 
 Buildarch:	noarch
